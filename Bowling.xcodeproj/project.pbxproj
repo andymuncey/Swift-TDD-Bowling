@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		BB6845261B5E76700084B9DA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6845251B5E76700084B9DA /* main.swift */; };
+		BB6845351B5E76DA0084B9DA /* BowlingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6845341B5E76DA0084B9DA /* BowlingTests.swift */; };
+		BB68453C1B5E78480084B9DA /* Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB68453B1B5E78480084B9DA /* Frame.swift */; };
+		BB68453D1B5E78480084B9DA /* Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB68453B1B5E78480084B9DA /* Frame.swift */; };
+		BB6845411B5E811E0084B9DA /* Scorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6845401B5E811E0084B9DA /* Scorer.swift */; };
+		BB6845421B5E811E0084B9DA /* Scorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6845401B5E811E0084B9DA /* Scorer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +30,22 @@
 /* Begin PBXFileReference section */
 		BB6845221B5E76700084B9DA /* Bowling */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Bowling; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB6845251B5E76700084B9DA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		BB6845301B5E76DA0084B9DA /* BowlingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BowlingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB6845331B5E76DA0084B9DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB6845341B5E76DA0084B9DA /* BowlingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlingTests.swift; sourceTree = "<group>"; };
+		BB68453B1B5E78480084B9DA /* Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Frame.swift; path = ../Frame.swift; sourceTree = "<group>"; };
+		BB6845401B5E811E0084B9DA /* Scorer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scorer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BB68451F1B5E76700084B9DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB68452D1B5E76DA0084B9DA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				BB6845241B5E76700084B9DA /* Bowling */,
+				BB6845311B5E76DA0084B9DA /* BowlingTests */,
 				BB6845231B5E76700084B9DA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				BB6845221B5E76700084B9DA /* Bowling */,
+				BB6845301B5E76DA0084B9DA /* BowlingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,9 +76,28 @@
 		BB6845241B5E76700084B9DA /* Bowling */ = {
 			isa = PBXGroup;
 			children = (
+				BB68453B1B5E78480084B9DA /* Frame.swift */,
 				BB6845251B5E76700084B9DA /* main.swift */,
+				BB6845401B5E811E0084B9DA /* Scorer.swift */,
 			);
 			path = Bowling;
+			sourceTree = "<group>";
+		};
+		BB6845311B5E76DA0084B9DA /* BowlingTests */ = {
+			isa = PBXGroup;
+			children = (
+				BB6845341B5E76DA0084B9DA /* BowlingTests.swift */,
+				BB6845321B5E76DA0084B9DA /* Supporting Files */,
+			);
+			path = BowlingTests;
+			sourceTree = "<group>";
+		};
+		BB6845321B5E76DA0084B9DA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BB6845331B5E76DA0084B9DA /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +120,23 @@
 			productReference = BB6845221B5E76700084B9DA /* Bowling */;
 			productType = "com.apple.product-type.tool";
 		};
+		BB68452F1B5E76DA0084B9DA /* BowlingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB6845361B5E76DA0084B9DA /* Build configuration list for PBXNativeTarget "BowlingTests" */;
+			buildPhases = (
+				BB68452C1B5E76DA0084B9DA /* Sources */,
+				BB68452D1B5E76DA0084B9DA /* Frameworks */,
+				BB68452E1B5E76DA0084B9DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BowlingTests;
+			productName = BowlingTests;
+			productReference = BB6845301B5E76DA0084B9DA /* BowlingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -92,6 +147,9 @@
 				ORGANIZATIONNAME = "University of Chester";
 				TargetAttributes = {
 					BB6845211B5E76700084B9DA = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					BB68452F1B5E76DA0084B9DA = {
 						CreatedOnToolsVersion = 6.4;
 					};
 				};
@@ -109,9 +167,20 @@
 			projectRoot = "";
 			targets = (
 				BB6845211B5E76700084B9DA /* Bowling */,
+				BB68452F1B5E76DA0084B9DA /* BowlingTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BB68452E1B5E76DA0084B9DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BB68451E1B5E76700084B9DA /* Sources */ = {
@@ -119,6 +188,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB6845261B5E76700084B9DA /* main.swift in Sources */,
+				BB6845411B5E811E0084B9DA /* Scorer.swift in Sources */,
+				BB68453C1B5E78480084B9DA /* Frame.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB68452C1B5E76DA0084B9DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB68453D1B5E78480084B9DA /* Frame.swift in Sources */,
+				BB6845421B5E811E0084B9DA /* Scorer.swift in Sources */,
+				BB6845351B5E76DA0084B9DA /* BowlingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +298,38 @@
 			};
 			name = Release;
 		};
+		BB6845371B5E76DA0084B9DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BowlingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BB6845381B5E76DA0084B9DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BowlingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -234,6 +347,14 @@
 			buildConfigurations = (
 				BB68452A1B5E76700084B9DA /* Debug */,
 				BB68452B1B5E76700084B9DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BB6845361B5E76DA0084B9DA /* Build configuration list for PBXNativeTarget "BowlingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB6845371B5E76DA0084B9DA /* Debug */,
+				BB6845381B5E76DA0084B9DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
