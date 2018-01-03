@@ -18,7 +18,7 @@ class BowlingTests: XCTestCase {
         scorer.addThrow(10)
         scorer.addThrow(2)
         scorer.addThrow(1)
-        let frame1Score = scorer.scoreForFrameIndex(0)
+        let frame1Score = scorer.scoreForFrame(index: 0)
         XCTAssert(frame1Score == 13,"Strike test");
     }
     
@@ -28,7 +28,7 @@ class BowlingTests: XCTestCase {
         scorer.addThrow(5) //10 for frame 2, 14 with next ball added on
         scorer.addThrow(6)
         scorer.addThrow(1)
-        let frame1Score = scorer.scoreForFrameIndex(0)
+        let frame1Score = scorer.scoreForFrame(index: 0)
         XCTAssert(frame1Score == 16,"Two Spares test, value was \(frame1Score), should be 16")
     }
     
@@ -40,7 +40,7 @@ class BowlingTests: XCTestCase {
         scorer.addThrow(5) //10 for frame 2, 14 with next ball added on
         scorer.addThrow(4)
         scorer.addThrow(6)
-        let frame2Score = scorer.scoreForFrameIndex(1)
+        let frame2Score = scorer.scoreForFrame(index: 1)
         XCTAssert(frame2Score == 14,"Two Spares test, value was \(frame2Score), should be 14")
     }
     
@@ -49,14 +49,14 @@ class BowlingTests: XCTestCase {
         scorer.addThrow(10)
         scorer.addThrow(10)
         scorer.addThrow(10)
-        let frame1Score = scorer.scoreForFrameIndex(0)
+        let frame1Score = scorer.scoreForFrame(index: 0)
         XCTAssert(frame1Score == 30,"Turkey OK");
     }
     
     func testDoubleGutterball(){
         scorer.addThrow(0)
         scorer.addThrow(0)
-        let frame1Score = scorer.scoreForFrameIndex(0)
+        let frame1Score = scorer.scoreForFrame(index: 0)
         XCTAssert(frame1Score == 0,"Double gutterball OK");
     }
     
@@ -88,7 +88,7 @@ class BowlingTests: XCTestCase {
         for _ in 1...13{
             scorer.addThrow(10)
         }
-        let frame10Score = scorer.scoreForFrameIndex(9)
+        let frame10Score = scorer.scoreForFrame(index: 9)
         XCTAssert(frame10Score == 30,"Last Frame Perfect Game, value was \(frame10Score), should be 30")
     }
     
@@ -96,7 +96,7 @@ class BowlingTests: XCTestCase {
         for _ in 1...13{
             scorer.addThrow(10)
         }
-        let frame9Score = scorer.scoreForFrameIndex(8)
+        let frame9Score = scorer.scoreForFrame(index: 8)
         XCTAssert(frame9Score == 30,"9th Perfect Game failed, value was \(frame9Score), should be 30")
     }
     

@@ -6,6 +6,9 @@ class Frame{
     private var throw2: Int?
     private var throw3: Int?
     
+    
+
+    
     func isComplete() -> Bool{
         
         if !finalFrame{
@@ -47,7 +50,7 @@ class Frame{
         return score
     }
     
-    func throwWithPins(_ pins: Int){
+    func addThrow(pins: Int){
         
         if throw1 == nil{
             throw1 = pins

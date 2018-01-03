@@ -14,12 +14,12 @@ class Scorer{
      
         let currentFrame = frames.last!
         if !currentFrame.isComplete(){
-            currentFrame.throwWithPins(pins)
+            currentFrame.addThrow(pins: pins)
         }
         else{
             if frames.count < 10{
                 let newFrame = Frame()
-                newFrame.throwWithPins(pins)
+                newFrame.addThrow(pins: pins)
                 if frames.count == 9 {
                     newFrame.finalFrame = true
                 }
@@ -32,12 +32,12 @@ class Scorer{
     func totalScore() -> Int{
         var total = 0
         for i in 0..<frames.count {
-            total += scoreForFrameIndex(i)
+            total += scoreForFrame(index:i)
         }
         return total
     }
     
-    func scoreForFrameIndex(_ index: Int) -> Int{
+    func scoreForFrame(index: Int) -> Int{
         
         let frame = frames[index]
         
