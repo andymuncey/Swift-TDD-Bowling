@@ -26,10 +26,10 @@ func isComplete() -> Bool{
     }
     else{
         //spare or strike and 3rd ball has value
-       var completeFinalFrameWithStrike = (isStrike() || isSpare()) && throw3 >= 0;
+        let completeFinalFrameWithStrike = (isStrike() || isSpare()) && throw3 != nil
         
         //no spare, strike and second ball has value
-        var completeFinalFrameNoSpareOrStrike =  !isSpare() && !isStrike() && throw2 >= 0;
+        let completeFinalFrameNoSpareOrStrike =  !isSpare() && !isStrike() && throw2 != nil;
         
         return completeFinalFrameNoSpareOrStrike || completeFinalFrameWithStrike;
     }
@@ -60,7 +60,7 @@ func baseScore() -> Int{
     return score
 }
 
-func throwWithPins(pins: Int){
+func throwWithPins(_ pins: Int){
     
     if throw1 == nil{
         throw1 = pins

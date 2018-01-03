@@ -22,15 +22,15 @@ class Scorer{
         frames.append(Frame())
     }
     
-    func addThrow(pins: Int){
+    func addThrow(_ pins: Int){
      
-        var currentFrame = frames.last!
+        let currentFrame = frames.last!
         if !currentFrame.isComplete(){
             currentFrame.throwWithPins(pins)
         }
         else{
             if frames.count < 10{
-                var newFrame = Frame()
+                let newFrame = Frame()
                 newFrame.throwWithPins(pins)
                 if frames.count == 9 {
                     newFrame.finalFrame = true
@@ -44,15 +44,15 @@ class Scorer{
     
     func totalScore() -> Int{
         var total = 0
-        for var i = 0; i < frames.count; i++ {
+        for i in 0..<frames.count {
             total += scoreForFrameIndex(i)
         }
         return total
     }
     
-    func scoreForFrameIndex(index: Int) -> Int{
+    func scoreForFrameIndex(_ index: Int) -> Int{
         
-        var frame = frames[index]
+        let frame = frames[index]
         
         if index < 9 {
             var frameScore = frame.baseScore()
@@ -60,12 +60,12 @@ class Scorer{
             if frame.isStrike(){
                 //next frame
                 if frames.count > index + 1 {
-                    var nextFrame = frames[index + 1]
+                    let nextFrame = frames[index + 1]
                     frameScore += nextFrame.throw1Score() + nextFrame.throw2Score()
                     if nextFrame.isStrike() && !nextFrame.finalFrame{
                         //next frame
                         if frames.count > index + 2{
-                            var thirdFrame = frames[index + 2]
+                            let thirdFrame = frames[index + 2]
                             frameScore += thirdFrame.throw1Score()
                         }
                     }
@@ -76,7 +76,7 @@ class Scorer{
                 if frame.isSpare(){
                     //next frame
                     if frames.count > index + 1{
-                        var nextFrame = frames[index + 1]
+                        let nextFrame = frames[index + 1]
                         frameScore += nextFrame.throw1Score()
                     }
                 }
