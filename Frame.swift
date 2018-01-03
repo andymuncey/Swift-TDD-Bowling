@@ -1,13 +1,14 @@
-class Frame{
+class Frame {
     
     var finalFrame = false
     
-    private var throw1: Int?
+    private var throw1: Int
     private var throw2: Int?
     private var throw3: Int?
     
-    
-
+    init(pins: Int){
+        throw1 = pins
+    }
     
     func isComplete() -> Bool{
         
@@ -26,10 +27,10 @@ class Frame{
     }
     
     func isSpare() -> Bool{
-        if throw1 != nil && throw2 != nil{
-            return throw1! + throw2! == 10
+        guard throw2 != nil else {
+            return false
         }
-        return false
+        return throw1 + throw2! == 10
     }
     
     func isStrike() -> Bool{
@@ -37,10 +38,8 @@ class Frame{
     }
     
     func baseScore() -> Int{
-        var score = 0
-        if throw1 != nil{
-            score += throw1!
-        }
+        var score = throw1
+        
         if throw2 != nil{
             score += throw2!
         }
@@ -52,22 +51,15 @@ class Frame{
     
     func addThrow(pins: Int){
         
-        if throw1 == nil{
-            throw1 = pins
-        } else if throw2 == nil{
+        if throw2 == nil{
             throw2 = pins
-        } else if throw3 == nil{
+        } else if throw3 == nil && finalFrame{
             throw3 = pins
         }
     }
     
-    
     func throw1Score() -> Int{
-        if let score = throw1{
-            return score
-        }else{
-            return 0
-        }
+        return throw1
     }
     
     func throw2Score() -> Int{
@@ -75,6 +67,38 @@ class Frame{
             return score
         }else{
             return 0
+        }
+    }
+}
+
+extension Frame : CustomStringConvertible {
+    var description: String {
+        get{
+            if isStrike() {
+                return "[X| ]"
+            }
+            if isSpare() {
+                return "[\(throw1)|/]"
+            }
+            if !finalFrame {
+                if throw2 == nil  {
+                    return "[\(throw1)| ]"
+                }
+                else {
+                    return "[\(throw1)|\(throw2!)]"
+                }
+            }
+            else {
+                if throw2 == nil {
+                    return "[\(throw1)| | ]"
+                }
+                else if throw3 == nil {
+                    return "[(\throw1)|\(throw2!)| "
+                } else {
+                    return "[(\throw1)|\(throw2!)|\(throw3!)"
+                }
+            }
+            
         }
     }
 }
