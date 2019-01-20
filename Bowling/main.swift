@@ -22,12 +22,11 @@ func getPlayersNames() -> [String] {
     return names
 }
 
-var games = [Game]()
+var games = [Scorer]()
 var names = getPlayersNames()
 for _ in names {
-    games.append(Game())
+    games.append(Scorer())
 }
-
 
 for frameNumber in 1...10 {
     
@@ -45,10 +44,7 @@ for frameNumber in 1...10 {
     }
 }
 
-
 print("\n")
 for (i, player) in names.enumerated() {
     print(player + ": \(games[i].totalScore())")
 }
-
-

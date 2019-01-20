@@ -2,11 +2,11 @@ import XCTest
 
 class BowlingTests: XCTestCase {
     
-    var scorer : Game!
+    var scorer : Scorer!
     
     override func setUp() {
         super.setUp()
-        scorer = Game()
+        scorer = Scorer()
     }
     
     override func tearDown() {

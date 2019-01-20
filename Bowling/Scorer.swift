@@ -1,9 +1,8 @@
-class Game{
+class Scorer{
     
     var frames : [Frame]
     
     init(){
-        //create array of frames
         frames = [Frame]()
     }
     
@@ -87,7 +86,7 @@ class Game{
     } 
 }
 
-extension Game : CustomStringConvertible {
+extension Scorer : CustomStringConvertible {
     
     var description : String {
         get {
@@ -98,5 +97,4 @@ extension Game : CustomStringConvertible {
             return framesPrint
         }
     }
-    
 }

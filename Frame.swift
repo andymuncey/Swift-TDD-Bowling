@@ -38,15 +38,7 @@ class Frame {
     }
     
     func baseScore() -> Int{
-        var score = throw1
-        
-        if throw2 != nil{
-            score += throw2!
-        }
-        if throw3 != nil{
-            score += throw3!
-        }
-        return score
+        return throw1 + (throw2 ?? 0) + (throw3 ?? 0)
     }
     
     func addThrow(pins: Int){
@@ -63,11 +55,7 @@ class Frame {
     }
     
     func throw2Score() -> Int{
-        if let score = throw2{
-            return score
-        }else{
-            return 0
-        }
+        return throw2 ?? 0
     }
 }
 

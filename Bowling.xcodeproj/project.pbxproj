@@ -11,8 +11,8 @@
 		BB6845351B5E76DA0084B9DA /* BowlingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6845341B5E76DA0084B9DA /* BowlingTests.swift */; };
 		BB68453C1B5E78480084B9DA /* Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB68453B1B5E78480084B9DA /* Frame.swift */; };
 		BB68453D1B5E78480084B9DA /* Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB68453B1B5E78480084B9DA /* Frame.swift */; };
-		BB6845411B5E811E0084B9DA /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6845401B5E811E0084B9DA /* Game.swift */; };
-		BB6845421B5E811E0084B9DA /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6845401B5E811E0084B9DA /* Game.swift */; };
+		BB6845411B5E811E0084B9DA /* Scorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6845401B5E811E0084B9DA /* Scorer.swift */; };
+		BB6845421B5E811E0084B9DA /* Scorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6845401B5E811E0084B9DA /* Scorer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,7 +34,7 @@
 		BB6845331B5E76DA0084B9DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB6845341B5E76DA0084B9DA /* BowlingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlingTests.swift; sourceTree = "<group>"; };
 		BB68453B1B5E78480084B9DA /* Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Frame.swift; path = ../Frame.swift; sourceTree = "<group>"; };
-		BB6845401B5E811E0084B9DA /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		BB6845401B5E811E0084B9DA /* Scorer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scorer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +78,7 @@
 			children = (
 				BB68453B1B5E78480084B9DA /* Frame.swift */,
 				BB6845251B5E76700084B9DA /* main.swift */,
-				BB6845401B5E811E0084B9DA /* Game.swift */,
+				BB6845401B5E811E0084B9DA /* Scorer.swift */,
 			);
 			path = Bowling;
 			sourceTree = "<group>";
@@ -143,14 +143,16 @@
 		BB68451A1B5E76700084B9DA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "University of Chester";
 				TargetAttributes = {
 					BB6845211B5E76700084B9DA = {
 						CreatedOnToolsVersion = 6.4;
+						LastSwiftMigration = 1010;
 					};
 					BB68452F1B5E76DA0084B9DA = {
 						CreatedOnToolsVersion = 6.4;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -188,7 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB6845261B5E76700084B9DA /* main.swift in Sources */,
-				BB6845411B5E811E0084B9DA /* Game.swift in Sources */,
+				BB6845411B5E811E0084B9DA /* Scorer.swift in Sources */,
 				BB68453C1B5E78480084B9DA /* Frame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,7 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB68453D1B5E78480084B9DA /* Frame.swift in Sources */,
-				BB6845421B5E811E0084B9DA /* Game.swift in Sources */,
+				BB6845421B5E811E0084B9DA /* Scorer.swift in Sources */,
 				BB6845351B5E76DA0084B9DA /* BowlingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,12 +220,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -270,12 +274,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -306,7 +312,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -314,7 +320,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -334,7 +340,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.ac.chester.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -350,7 +356,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "uk.ac.chester.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
